@@ -38,7 +38,13 @@ public class MainActivity extends ActionBarActivity {
 				if(tag instanceof ChannelBasicDetail)
 					chB = (ChannelBasicDetail)tag;
 						
-				Toast.makeText(MainActivity.this, "Ch  : " + chB.channelNumber + " ; "+ chB.channelName ,
+				String displayString = "Ch  : " + chB.channelNumber + " ; "+ chB.channelName ;
+				if(chB.getCategories() != null)
+					for(ChannelCategory chCat : chB.getCategories())
+						displayString += " ; " + chCat.toString();
+					
+				
+				Toast.makeText(MainActivity.this, displayString,
 						Toast.LENGTH_SHORT).show();
 				
 				

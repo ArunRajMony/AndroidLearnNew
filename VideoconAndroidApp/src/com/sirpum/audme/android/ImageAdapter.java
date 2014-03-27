@@ -46,9 +46,16 @@ public class ImageAdapter extends BaseAdapter {
         //set the Id since we want to have multiple tabs on the mobile screen, a channel icon can appear in different tabs or even if it appears in 
         //only one tab, the index position cannot be used to retrieve the channel's 3 digit #. So here while creating the view for each image icon (view)
         //we will set the "id" with the corresponding channel #.  basically adding meta-data to each icon. other option to set meta-data is via the setTag method
-        imageView.setId(ChannelUtility.chNumImgIndexList[position]); // added by arajmony
         
-        ChannelBasicDetail tag = new ChannelBasicDetail(ChannelUtility.chNumImgIndexList[position], ChannelUtility.chNameImgIndexList[position]);
+        int chNum = ChannelUtility.chNumImgIndexList[position];
+        Integer ChNumInteger = Integer.valueOf(chNum);
+        imageView.setId(chNum); 
+        //setting tag with channel number and ch name
+        ChannelBasicDetail tag = new ChannelBasicDetail(chNum, ChannelUtility.chNameImgIndexList[position]);
+        if(ChannelUtility.chCategoryMap.containsKey(ChNumInteger)){
+        	tag.getCategories().addAll(ChannelUtility.chCategoryMap.get(ChNumInteger));
+        }
+        
         imageView.setTag(tag);
       
         

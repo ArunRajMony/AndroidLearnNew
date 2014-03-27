@@ -3,6 +3,9 @@
  */
 package com.sirpum.audme.android;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author arajmony
  *
@@ -11,7 +14,7 @@ public class ChannelBasicDetail {
 	
 	int channelNumber;
 	String channelName;
-	ChannelCategory[] categories;
+	List<ChannelCategory> categories;
 	
 	
 	
@@ -23,15 +26,18 @@ public class ChannelBasicDetail {
 
 
 
-	public ChannelCategory[] getCategories() {
+	public List<ChannelCategory> getCategories() {
+		
+		if(categories == null)
+			categories = new ArrayList<ChannelCategory>(2);
+		
 		return categories;
 	}
-	
+
+
+
+
 	
 	
 
-}
-
-enum ChannelCategory{
-	FAVOURITES,TAMIL,HD_CHANNELS,MALAYALAM,NEWS,MOVIES_ENGLISH,SPORTS
 }

@@ -3,6 +3,11 @@
  */
 package com.sirpum.audme.android;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 /**
  * @author arajmony
  * 
@@ -37,4 +42,21 @@ public class ChannelUtility {
 			"DD Malayalam ", "Asianet Movies ", "Surya Music ", "Mathrubhumi ",
 			"ASIANET NEWS", "MANORAMA NEWS", "IndiaVision news ",
 			"Kairali we ", "Reporter TV ", "Shalom tv ", "Kochu TV " };
+	
+	public static Map<Integer, List<ChannelCategory>>  chCategoryMap = new HashMap<>();
+	
+	static{
+		//TODO populate this for all Channels. 
+		
+		chCategoryMap.put(Integer.valueOf(242), Arrays.asList(ChannelCategory.MOVIES_ENGLISH,ChannelCategory.FAVOURITES));
+		chCategoryMap.put(Integer.valueOf(798), Arrays.asList(ChannelCategory.TAMIL,ChannelCategory.FAVOURITES));
+		chCategoryMap.put(Integer.valueOf(801), Arrays.asList(ChannelCategory.TAMIL));
+		
+	}
+	
+	public ChannelUtility(){
+		
+		
+	}
+	
 }
