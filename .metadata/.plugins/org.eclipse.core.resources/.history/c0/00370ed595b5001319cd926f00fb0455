@@ -1,0 +1,83 @@
+package com.sirpum.audme.android;
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBarActivity;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.GridView;
+import android.widget.Toast;
+
+public class MainActivity extends ActionBarActivity {
+
+	static public final int[] chNumImgIndexList = { 242, 248, 256, 351, 353, 355, 357, 359, 361,
+			381, 382, 402, 404, 408, 424, 560, 602, 603, 604, 606, 640, 653,
+			654, 797, 798, 799, 800, 801, 802, 803, 804, 805, 806, 807, 808,
+			809, 810, 811, 812, 813, 814, 815, 816, 817, 818, 819, 820, 821,
+			822, 823, 824, 825, 826, 827, 828, 829, 830, 851, 852, 853, 854,
+			855, 856, 857, 858, 859, 860, 861, 862, 863, 864, 865, 866, 868,
+			869, 870 };
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.fragment_main); // always use the fragment one
+												// and not the "activity" one
+
+		GridView gridview = (GridView) findViewById(R.id.gridview);
+		gridview.setAdapter(new ImageAdapter(this));
+
+		gridview.setOnItemClickListener(new OnItemClickListener() {
+			public void onItemClick(AdapterView<?> parent, View v,
+					int position, long id) {
+				Toast.makeText(MainActivity.this, "Ch # via v.id : " +v.getId(),
+						Toast.LENGTH_SHORT).show();
+				
+				
+			}
+		});
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+
+	/**
+	 * A placeholder fragment containing a simple view.
+	 */
+	public static class PlaceholderFragment extends Fragment {
+
+		public PlaceholderFragment() {
+		}
+
+		@Override
+		public View onCreateView(LayoutInflater inflater, ViewGroup container,
+				Bundle savedInstanceState) {
+			View rootView = inflater.inflate(R.layout.fragment_main, container,
+					false);
+			return rootView;
+		}
+	}
+
+}

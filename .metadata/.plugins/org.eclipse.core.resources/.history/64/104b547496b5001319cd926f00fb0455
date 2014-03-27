@@ -1,0 +1,16 @@
+/**
+ * 
+ */
+package com.sirpum.audme.android;
+
+/**
+ * @author arajmony
+ *
+ */
+public class ChannelBasicDetail {
+	
+	int channelNumber;
+	String channelName;
+	
+
+}

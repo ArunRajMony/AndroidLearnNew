@@ -1,0 +1,6 @@
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-03-27 01:49:34.582
+!MESSAGE Failed to load properties file for project 'VideoconAndroidApp'
+
+!ENTRY org.eclipse.ui 4 4 2014-03-27 15:09:29.861
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.ProblemView.
