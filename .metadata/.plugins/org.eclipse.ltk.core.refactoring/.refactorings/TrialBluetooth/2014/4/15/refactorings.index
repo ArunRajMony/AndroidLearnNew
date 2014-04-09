@@ -1,0 +1,5 @@
+1396973803379	Rename field 'BTinputStream'
+1396973808951	Rename field 'BTOutputStream'
+1396975507707	Rename type 'MyListener'
+1396975726345	Rename local variable 'macsUUID'
+1396975926094	Rename local variable 'connected'
