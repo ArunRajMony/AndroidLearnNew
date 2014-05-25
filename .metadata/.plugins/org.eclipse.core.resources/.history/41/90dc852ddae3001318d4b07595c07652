@@ -1,0 +1,294 @@
+/**
+ * 
+ */
+package com.siprum.smart.tv.mobile.v2videoconapp;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * @author arajmony
+ * 
+ */
+public class V2ChannelUtility {
+	
+
+	
+	public  enum channelNamenum{
+		
+		STAR_WORLD("Star World",179,V2ChannelCategory.OTHERS),
+		STAR_WORLD_HD("Star World HD",180,V2ChannelCategory.OTHERS,V2ChannelCategory.HD_CHANNELS),
+		
+		STAR_MOVIES_HD("Star Movies HD",242,V2ChannelCategory.MOVIES_ENGLISH,V2ChannelCategory.HD_CHANNELS),
+		ZEE_STUDIOHD("Zee StudioHD",248,V2ChannelCategory.MOVIES_ENGLISH,V2ChannelCategory.HD_CHANNELS),
+		MOVIES_NOW_HD("Movies Now HD",256,V2ChannelCategory.MOVIES_ENGLISH,V2ChannelCategory.HD_CHANNELS),
+		
+		NDTV_24_X_7("NDTV 24 X 7",351,V2ChannelCategory.NEWS),
+		TIMES_NOW("TIMES NOW",353,V2ChannelCategory.NEWS),
+		CNN_IBN("CNN IBN",355,V2ChannelCategory.NEWS),
+		HEADLINES_TODAY("HEADLINES TODAY",357,V2ChannelCategory.NEWS),
+		CNN("CNN",359,V2ChannelCategory.NEWS),
+		BBC_WORLD("BBC World",361,V2ChannelCategory.NEWS),
+		RUSSIA_TODAY("Russia Today",363,V2ChannelCategory.NEWS),
+		CNBC_TV_18("CNBC TV 18",381,V2ChannelCategory.NEWS),
+		CNBC_PRIME_HD("cnbc prime hd",382,V2ChannelCategory.NEWS),
+		
+		STAR_SPORTS_HD_2("Star Sports HD 2",402,V2ChannelCategory.SPORTS,V2ChannelCategory.HD_CHANNELS),
+		STAR_SPORTS_HD_1("Star Sports HD 1",404,V2ChannelCategory.SPORTS,V2ChannelCategory.HD_CHANNELS),
+		TEN_HD("ten HD",412,V2ChannelCategory.SPORTS,V2ChannelCategory.HD_CHANNELS),
+		SONY_SIX_HD("SONY SIX hd",424,V2ChannelCategory.SPORTS,V2ChannelCategory.HD_CHANNELS),
+		
+		DISCOVERY_HD("discovery HD",442,V2ChannelCategory.SCIENCE_TRAVEL,V2ChannelCategory.HD_CHANNELS),
+		HISTORY_TV("history tv",443,V2ChannelCategory.SCIENCE_TRAVEL),
+		HISTORY_HD__TAMIL_FEED_("History HD (Tamil feed)",444,V2ChannelCategory.SCIENCE_TRAVEL,V2ChannelCategory.HD_CHANNELS),
+		NGC_HD("ngc HD",446,V2ChannelCategory.SCIENCE_TRAVEL,V2ChannelCategory.HD_CHANNELS),
+		TRAVEL_XP_HD("Travel XP HD",476,V2ChannelCategory.SCIENCE_TRAVEL,V2ChannelCategory.HD_CHANNELS)
+		,
+		M_TUNES_HD("M TUNES hd",526,V2ChannelCategory.HD_CHANNELS),
+		
+		TAMIL_HOME("Tamil Home",550,V2ChannelCategory.TAMIL),
+		SUN_TV("Sun Tv",551,V2ChannelCategory.TAMIL),
+		SUN_TV_HD("Sun TV HD",552,V2ChannelCategory.TAMIL),
+		STAR_VIJAY("star vijay",553,V2ChannelCategory.TAMIL),
+		KALAIGNAR_TV("Kalaignar tv",555,V2ChannelCategory.TAMIL),
+		JAYA_TV("jaya tv",557,V2ChannelCategory.TAMIL),
+		ZEE_TAMIL("zee tamil",559,V2ChannelCategory.TAMIL),
+		THANTHI_TV("Thanthi TV",561,V2ChannelCategory.TAMIL),
+		POLIMER("polimer",565,V2ChannelCategory.TAMIL),
+		SIRIPOLI("Siripoli",566,V2ChannelCategory.TAMIL),
+		VASANTH_TV("Vasanth TV",567,V2ChannelCategory.TAMIL),
+		RAJ_TV("RAJ TV",569,V2ChannelCategory.TAMIL),
+		MURASU("Murasu",570,V2ChannelCategory.TAMIL),
+		CAPTAIN_TV("captain TV",572,V2ChannelCategory.TAMIL),
+		KTV("Ktv",573,V2ChannelCategory.TAMIL),
+		KTV_HD("KTV HD",574,V2ChannelCategory.TAMIL),
+		ADITHYA("Adithya",575,V2ChannelCategory.TAMIL),
+		J_MOVIES("J Movies",577,V2ChannelCategory.TAMIL),
+		RAJ_DIGITAL_PLUS("Raj Digital Plus",579,V2ChannelCategory.TAMIL),
+		SUN_MUSIC("Sun Music",581,V2ChannelCategory.TAMIL),
+		SUN_MUSIC_HD("Sun Music HD",582,V2ChannelCategory.TAMIL),
+		ISAI_ARUVI("Isai Aruvi",583,V2ChannelCategory.TAMIL),
+		JAYA_MAX("jaya max",585,V2ChannelCategory.TAMIL),
+		SUN_NEWS("Sun News",586,V2ChannelCategory.TAMIL),
+		MEGA_TV("mega tv",587,V2ChannelCategory.TAMIL),
+		PUTHIYA_THALAMURAI("PUTHIYA THALAMURAI",589,V2ChannelCategory.TAMIL),
+		JAYA_PLUS("jaya plus",591,V2ChannelCategory.TAMIL),
+		KALAIGNAR_SETHIGAL("KALAIGNAR SETHIGAL",592,V2ChannelCategory.TAMIL),
+		MAKKAL_TV("Makkal TV",593,V2ChannelCategory.TAMIL),
+		CHUTTI_TV("Chutti Tv",595,V2ChannelCategory.TAMIL),
+		SUN_LIFE("Sun Life",596,V2ChannelCategory.TAMIL),
+		ANGEL_TV("angel tv",597,V2ChannelCategory.TAMIL),
+		DISCOVERY_TAMIL("Discovery Tamil",598,V2ChannelCategory.TAMIL),
+		DD_PODHIGAI("DD Podhigai",599,V2ChannelCategory.TAMIL),
+		
+		SURYA_TV("Surya Tv",601,V2ChannelCategory.MALAYALAM),
+		ASIANET("ASIANET",603,V2ChannelCategory.MALAYALAM),
+		MAZHAVIL_MANORAMA("MAZHAVIL MANORAMA",605,V2ChannelCategory.MALAYALAM),
+		KIRAN_TV("Kiran Tv",607,V2ChannelCategory.MALAYALAM),
+		KAIRALI_TV("Kairali tv",609,V2ChannelCategory.MALAYALAM),
+		ASIANET_PLUS("ASIANET PLUS",611,V2ChannelCategory.MALAYALAM),
+		AMRITA_TV("Amrita Tv",613,V2ChannelCategory.MALAYALAM),
+		KAIRALI_WE("Kairali we",615,V2ChannelCategory.MALAYALAM),
+		ASIANET_MOVIES("Asianet Movies",621,V2ChannelCategory.MALAYALAM),
+		SURYA_MUSIC("Surya Music",627,V2ChannelCategory.MALAYALAM),
+		KAPPA("Kappa",629,V2ChannelCategory.MALAYALAM),
+		ASIANET_NEWS("ASIANET NEWS",635,V2ChannelCategory.MALAYALAM),
+		MANORAMA_NEWS("MANORAMA NEWS",637,V2ChannelCategory.MALAYALAM),
+		MATHRUBHUMI("Mathrubhumi",639,V2ChannelCategory.MALAYALAM),
+		INDIAVISION_NEWS("IndiaVision news",641,V2ChannelCategory.MALAYALAM),
+		REPORTER_TV("Reporter TV",643,V2ChannelCategory.MALAYALAM),
+		KOCHU_TV("Kochu TV",645,V2ChannelCategory.MALAYALAM),
+		SHALOM_TV("Shalom tv",647,V2ChannelCategory.MALAYALAM),
+		DD_MALAYALAM("DD Malayalam",649,V2ChannelCategory.MALAYALAM);
+
+		
+		
+		private String  channelDisplayName;
+		private int channelNum;
+		private V2ChannelCategory categories[];
+		
+		channelNamenum(String name,int num,V2ChannelCategory... categories){
+			this.channelDisplayName = name;
+			this.channelNum = num;
+			if(categories != null)
+				this.categories = categories;
+		}
+		
+		String displayName(){
+			return channelDisplayName;
+		}
+		
+		int channelNumber(){
+			return channelNum;
+		}
+		
+		V2ChannelCategory[] channelCategories(){
+				return categories;
+		}
+		
+	}
+
+	public static final int[] chNumImgIndexList = {
+		179,
+		180,
+		242,
+		248,
+		256,
+		351,
+		353,
+		355,
+		357,
+		359,
+		361,
+		363,
+		381,
+		382,
+		402,
+		404,
+		412,
+		424,
+		442,
+		443,
+		444,
+		446,
+		476,
+		526,
+		550,
+		551,
+		552,
+		553,
+		555,
+		557,
+		559,
+		561,
+		565,
+		566,
+		567,
+		569,
+		570,
+		572,
+		573,
+		574,
+		575,
+		577,
+		579,
+		581,
+		582,
+		583,
+		585,
+		586,
+		587,
+		589,
+		591,
+		592,
+		593,
+		595,
+		596,
+		597,
+		598,
+		599,
+		601,
+		603,
+		605,
+		607,
+		609,
+		611,
+		613,
+		615,
+		621,
+		627,
+		629,
+		635,
+		637,
+		639,
+		641,
+		643,
+		645,
+		647,
+		649
+};
+
+	public static final String[] chNameImgIndexList = {
+		"Star World",
+		"Star World HD",
+		"Star Movies HD",
+		"Zee StudioHD",
+		"Movies Now HD",
+		"NDTV 24 X 7",
+		"TIMES NOW",
+		"CNN IBN",
+		"HEADLINES TODAY",
+		"CNN",
+		"BBC World",
+		"Russia Today",
+		"CNBC TV 18",
+		"cnbc prime hd",
+		"Star Sports HD 2",
+		"Star Sports HD 1",
+		"ten HD",
+		"SONY SIX hd",
+		"discovery HD",
+		"history tv",
+		"History HD (Tamil feed)",
+		"ngc HD",
+		"Travel XP HD",
+		"M TUNES hd",
+		"Tamil Home",
+		"Sun Tv",
+		"Sun TV HD",
+		"star vijay",
+		"Kalaignar tv",
+		"jaya tv",
+		"zee tamil",
+		"Thanthi TV",
+		"polimer",
+		"Siripoli",
+		"Vasanth TV",
+		"RAJ TV",
+		"Murasu",
+		"captain TV",
+		"Ktv",
+		"KTV HD",
+		"Adithya",
+		"J Movies",
+		"Raj Digital Plus",
+		"Sun Music",
+		"Sun Music HD",
+		"Isai Aruvi",
+		"jaya max",
+		"Sun News",
+		"mega tv",
+		"PUTHIYA THALAMURAI",
+		"jaya plus",
+		"KALAIGNAR SETHIGAL",
+		"Makkal TV",
+		"Chutti Tv",
+		"Sun Life",
+		"angel tv",
+		"Discovery Tamil",
+		"DD Podhigai",
+		"Surya Tv",
+		"ASIANET",
+		"MAZHAVIL MANORAMA",
+		"Kiran Tv",
+		"Kairali tv",
+		"ASIANET PLUS",
+		"Amrita Tv",
+		"Kairali we",
+		"Asianet Movies",
+		"Surya Music",
+		"Kappa",
+		"ASIANET NEWS",
+		"MANORAMA NEWS",
+		"Mathrubhumi",
+		"IndiaVision news",
+		"Reporter TV",
+		"Kochu TV",
+		"Shalom tv",
+		"DD Malayalam"
+		};
+	
+	
+}

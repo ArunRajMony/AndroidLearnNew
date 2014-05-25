@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">VideoconAndroidApp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="Favourites">Favourites</string>
+    <string name="Tamil">Tamil</string>
+    <string name="HD channels">HD channels</string>
+    <string name="NEWS">NEWS</string>
+    <string name="English Movies">English Movies</string>
+    <string name="Sports">Sports</string>
+    <string name="Malayalam">Malayalam</string>
+    <string name="OTHERS">OTHERS</string>
+
+</resources>
+

@@ -1,0 +1,55 @@
+/**
+ * 
+ */
+package com.sirpum.audme.android.util;
+
+import java.io.File;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+
+/*
+ *  This class is to generate the list of Thumb IDs for the image files under the  "res->drawable.." folders 
+ * 
+ */
+
+
+/**
+ * @author arajmony
+ *
+ */
+public class ImageThumbIDListGenerator {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		ImageThumbIDListGenerator obj = new ImageThumbIDListGenerator();
+		obj.doWork();
+		
+
+	}
+
+	private void doWork() {
+	   
+		
+		File drawableFolder = new File("/Users/arajmony/work/workspace/androidworkspace/AndroidLearnNew/VideoconAndroidApp/res/drawable-hdpi");
+		
+		File[] allFiles = drawableFolder.listFiles();
+		
+		SortedSet<String> setOfResourceNames = new TreeSet<String>();
+		
+		for(File f : allFiles){
+		  String name = f.getName();
+		  if(!name.startsWith("a_"))
+		     continue;
+		  
+		   setOfResourceNames.add("R.drawable."+f.get);	
+		}
+		
+		System.out.println(setOfResourceNames);
+		
+	}
+
+}

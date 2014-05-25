@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TabApplication</string>
+    <string name="title_section1">Movies</string>
+    <string name="title_section2">Music</string>
+    <string name="title_section3">Podcasts</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

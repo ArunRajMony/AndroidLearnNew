@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TabApplication</string>
+    <string name="title_section1">English Movies</string>
+    <string name="title_section2">Favourites</string>
+    <string name="title_section3">Tamil</string>
+    <string name="title_section4">NEWS</string>
+    <string name="title_section5">Malayalam</string>
+    <string name="title_section5">Children</string>
+    <string name="title_section5">Sports</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

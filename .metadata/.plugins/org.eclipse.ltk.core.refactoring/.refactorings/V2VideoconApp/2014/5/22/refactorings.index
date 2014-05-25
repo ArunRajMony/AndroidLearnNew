@@ -1,0 +1,13 @@
+1400992178852	Rename type 'ChannelBasicDetail'
+1400992190294	Rename type 'ChannelUtility'
+1400992203602	Rename type 'ChannelCategory'
+1401001466728	Rename type 'channelNamenum'
+1401001594516	Rename type 'V2ChannelCategory'
+1401001840487	Move compilation units
+1401001880391	Move compilation unit
+1401001905810	Move compilation unit
+1401002274060	Rename local variable 'v2ChannelCategory'
+1401007873229	Rename local variable 'obj'
+1401008688497	Rename type 'ImageAdapterForTabsSwiper'
+1401010040178	Rename field 'ARG_SECTION_NUMBER'
+1401012025177	Rename type 'ChannelDetailEnum'

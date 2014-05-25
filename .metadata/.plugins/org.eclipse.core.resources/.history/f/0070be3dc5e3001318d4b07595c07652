@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+package com.siprum.smart.tv.mobile.v2videoconapp;
+
+/**
+ * @author arajmony
+ *
+ */
+public enum ChannelCategory {
+
+	FAVOURITES,TAMIL,HD_CHANNELS,MALAYALAM,NEWS,MOVIES_ENGLISH,SPORTS,OTHERS,CHILDRENS
+}

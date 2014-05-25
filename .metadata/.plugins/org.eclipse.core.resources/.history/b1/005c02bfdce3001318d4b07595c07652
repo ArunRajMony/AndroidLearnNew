@@ -1,0 +1,39 @@
+/**
+ * 
+ */
+package com.siprum.smart.tv.mobile.v2videoconapp.util;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.siprum.smart.tv.mobile.v2videoconapp.enums.ChannelDetailEnum;
+import com.siprum.smart.tv.mobile.v2videoconapp.enums.V2ChannelCategoryEnum;
+
+
+/**
+ * @author arajmony
+ * 
+ */
+public class V2ChannelUtility {
+	
+	
+	
+	static public List<ChannelDetailEnum> getAllChannelDetailEnumsForChannelCategory(V2ChannelCategoryEnum forChannelCategory){
+		
+		List<ChannelDetailEnum> list = new ArrayList<ChannelDetailEnum>();
+	   	
+		for(ChannelDetailEnum curr : ChannelDetailEnum.values()){
+
+			   for( V2ChannelCategoryEnum chCatEnum : curr.getChannelCategories()){
+				   if(chCatEnum.equals(forChannelCategory))
+					   list.add(curr);
+			   }
+			
+		}
+		
+		
+		
+		return list;
+	}
+	
+}

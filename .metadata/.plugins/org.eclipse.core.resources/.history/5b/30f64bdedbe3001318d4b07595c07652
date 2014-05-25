@@ -1,0 +1,26 @@
+/**
+ * 
+ */
+package com.siprum.smart.tv.mobile.v2videoconapp.util;
+
+import java.util.List;
+
+import com.siprum.smart.tv.mobile.v2videoconapp.enums.ChannelDetailEnum;
+import com.siprum.smart.tv.mobile.v2videoconapp.enums.V2ChannelCategoryEnum;
+
+
+/**
+ * @author arajmony
+ * 
+ */
+public class V2ChannelUtility {
+	
+	
+	
+	public List<ChannelDetailEnum> getAllChannelDetailEnumsForChannelCategory(V2ChannelCategoryEnum v2ChannelCategory){
+		
+		
+		return null;
+	}
+	
+}

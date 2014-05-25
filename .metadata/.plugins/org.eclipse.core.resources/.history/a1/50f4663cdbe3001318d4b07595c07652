@@ -1,0 +1,138 @@
+/**
+ * 
+ */
+package com.siprum.smart.tv.mobile.v2videoconapp;
+
+
+/**
+ * @author arajmony
+ * 
+ */
+public class V2ChannelUtility {
+	
+
+	
+	public  enum ChannelDetailEnum{
+		
+		STAR_WORLD("Star World",179,V2ChannelCategoryEnum.OTHERS),
+		STAR_WORLD_HD("Star World HD",180,V2ChannelCategoryEnum.OTHERS,V2ChannelCategoryEnum.HD_CHANNELS,V2ChannelCategoryEnum.FAVOURITES),
+		
+		STAR_MOVIES_HD("Star Movies HD",242,V2ChannelCategoryEnum.MOVIES_ENGLISH,V2ChannelCategoryEnum.HD_CHANNELS,V2ChannelCategoryEnum.FAVOURITES),
+		ZEE_STUDIOHD("Zee StudioHD",248,V2ChannelCategoryEnum.MOVIES_ENGLISH,V2ChannelCategoryEnum.HD_CHANNELS,V2ChannelCategoryEnum.FAVOURITES),
+		MOVIES_NOW_HD("Movies Now HD",256,V2ChannelCategoryEnum.MOVIES_ENGLISH,V2ChannelCategoryEnum.HD_CHANNELS,V2ChannelCategoryEnum.FAVOURITES),
+		
+		NDTV_24_X_7("NDTV 24 X 7",351,V2ChannelCategoryEnum.NEWS,V2ChannelCategoryEnum.FAVOURITES),
+		TIMES_NOW("TIMES NOW",353,V2ChannelCategoryEnum.NEWS),
+		CNN_IBN("CNN IBN",355,V2ChannelCategoryEnum.NEWS),
+		HEADLINES_TODAY("HEADLINES TODAY",357,V2ChannelCategoryEnum.NEWS),
+		CNN("CNN",359,V2ChannelCategoryEnum.NEWS),
+		BBC_WORLD("BBC World",361,V2ChannelCategoryEnum.NEWS),
+		RUSSIA_TODAY("Russia Today",363,V2ChannelCategoryEnum.NEWS),
+		CNBC_TV_18("CNBC TV 18",381,V2ChannelCategoryEnum.NEWS),
+		CNBC_PRIME_HD("cnbc prime hd",382,V2ChannelCategoryEnum.NEWS),
+		
+		STAR_SPORTS_HD_2("Star Sports HD 2",402,V2ChannelCategoryEnum.SPORTS,V2ChannelCategoryEnum.HD_CHANNELS),
+		STAR_SPORTS_HD_1("Star Sports HD 1",404,V2ChannelCategoryEnum.SPORTS,V2ChannelCategoryEnum.HD_CHANNELS),
+		TEN_HD("ten HD",412,V2ChannelCategoryEnum.SPORTS,V2ChannelCategoryEnum.HD_CHANNELS),
+		SONY_SIX_HD("SONY SIX hd",424,V2ChannelCategoryEnum.SPORTS,V2ChannelCategoryEnum.HD_CHANNELS),
+		
+		DISCOVERY_HD("discovery HD",442,V2ChannelCategoryEnum.SCIENCE_TRAVEL,V2ChannelCategoryEnum.HD_CHANNELS),
+		HISTORY_TV("history tv",443,V2ChannelCategoryEnum.SCIENCE_TRAVEL),
+		HISTORY_HD__TAMIL_FEED_("History HD (Tamil feed)",444,V2ChannelCategoryEnum.SCIENCE_TRAVEL,V2ChannelCategoryEnum.HD_CHANNELS),
+		NGC_HD("ngc HD",446,V2ChannelCategoryEnum.SCIENCE_TRAVEL,V2ChannelCategoryEnum.HD_CHANNELS),
+		TRAVEL_XP_HD("Travel XP HD",476,V2ChannelCategoryEnum.SCIENCE_TRAVEL,V2ChannelCategoryEnum.HD_CHANNELS,V2ChannelCategoryEnum.FAVOURITES),
+		
+		M_TUNES_HD("M TUNES hd",526,V2ChannelCategoryEnum.HD_CHANNELS,V2ChannelCategoryEnum.FAVOURITES),
+		
+		TAMIL_HOME("Tamil Home",550,V2ChannelCategoryEnum.TAMIL),
+		SUN_TV("Sun Tv",551,V2ChannelCategoryEnum.TAMIL),
+		SUN_TV_HD("Sun TV HD",552,V2ChannelCategoryEnum.TAMIL,V2ChannelCategoryEnum.HD_CHANNELS),
+		STAR_VIJAY("star vijay",553,V2ChannelCategoryEnum.TAMIL,V2ChannelCategoryEnum.FAVOURITES),
+		KALAIGNAR_TV("Kalaignar tv",555,V2ChannelCategoryEnum.TAMIL),
+		JAYA_TV("jaya tv",557,V2ChannelCategoryEnum.TAMIL),
+		ZEE_TAMIL("zee tamil",559,V2ChannelCategoryEnum.TAMIL),
+		THANTHI_TV("Thanthi TV",561,V2ChannelCategoryEnum.TAMIL),
+		POLIMER("polimer",565,V2ChannelCategoryEnum.TAMIL),
+		SIRIPOLI("Siripoli",566,V2ChannelCategoryEnum.TAMIL),
+		VASANTH_TV("Vasanth TV",567,V2ChannelCategoryEnum.TAMIL),
+		RAJ_TV("RAJ TV",569,V2ChannelCategoryEnum.TAMIL),
+		MURASU("Murasu",570,V2ChannelCategoryEnum.TAMIL),
+		CAPTAIN_TV("captain TV",572,V2ChannelCategoryEnum.TAMIL),
+		KTV("Ktv",573,V2ChannelCategoryEnum.TAMIL),
+		KTV_HD("KTV HD",574,V2ChannelCategoryEnum.TAMIL,V2ChannelCategoryEnum.HD_CHANNELS),
+		ADITHYA("Adithya",575,V2ChannelCategoryEnum.TAMIL,V2ChannelCategoryEnum.FAVOURITES),
+		J_MOVIES("J Movies",577,V2ChannelCategoryEnum.TAMIL),
+		RAJ_DIGITAL_PLUS("Raj Digital Plus",579,V2ChannelCategoryEnum.TAMIL),
+		SUN_MUSIC("Sun Music",581,V2ChannelCategoryEnum.TAMIL),
+		SUN_MUSIC_HD("Sun Music HD",582,V2ChannelCategoryEnum.TAMIL,V2ChannelCategoryEnum.HD_CHANNELS,V2ChannelCategoryEnum.FAVOURITES),
+		ISAI_ARUVI("Isai Aruvi",583,V2ChannelCategoryEnum.TAMIL),
+		JAYA_MAX("jaya max",585,V2ChannelCategoryEnum.TAMIL),
+		SUN_NEWS("Sun News",586,V2ChannelCategoryEnum.TAMIL),
+		MEGA_TV("mega tv",587,V2ChannelCategoryEnum.TAMIL),
+		PUTHIYA_THALAMURAI("PUTHIYA THALAMURAI",589,V2ChannelCategoryEnum.TAMIL),
+		JAYA_PLUS("jaya plus",591,V2ChannelCategoryEnum.TAMIL),
+		KALAIGNAR_SETHIGAL("KALAIGNAR SETHIGAL",592,V2ChannelCategoryEnum.TAMIL),
+		MAKKAL_TV("Makkal TV",593,V2ChannelCategoryEnum.TAMIL),
+		CHUTTI_TV("Chutti Tv",595,V2ChannelCategoryEnum.TAMIL),
+		SUN_LIFE("Sun Life",596,V2ChannelCategoryEnum.TAMIL),
+		ANGEL_TV("angel tv",597,V2ChannelCategoryEnum.TAMIL),
+		DISCOVERY_TAMIL("Discovery Tamil",598,V2ChannelCategoryEnum.TAMIL),
+		DD_PODHIGAI("DD Podhigai",599,V2ChannelCategoryEnum.TAMIL,V2ChannelCategoryEnum.FAVOURITES),
+		
+		SURYA_TV("Surya Tv",601,V2ChannelCategoryEnum.MALAYALAM),
+		ASIANET("ASIANET",603,V2ChannelCategoryEnum.MALAYALAM),
+		MAZHAVIL_MANORAMA("MAZHAVIL MANORAMA",605,V2ChannelCategoryEnum.MALAYALAM,V2ChannelCategoryEnum.FAVOURITES),
+		KIRAN_TV("Kiran Tv",607,V2ChannelCategoryEnum.MALAYALAM),
+		KAIRALI_TV("Kairali tv",609,V2ChannelCategoryEnum.MALAYALAM),
+		ASIANET_PLUS("ASIANET PLUS",611,V2ChannelCategoryEnum.MALAYALAM),
+		AMRITA_TV("Amrita Tv",613,V2ChannelCategoryEnum.MALAYALAM),
+		KAIRALI_WE("Kairali we",615,V2ChannelCategoryEnum.MALAYALAM),
+		ASIANET_MOVIES("Asianet Movies",621,V2ChannelCategoryEnum.MALAYALAM),
+		SURYA_MUSIC("Surya Music",627,V2ChannelCategoryEnum.MALAYALAM),
+		KAPPA("Kappa",629,V2ChannelCategoryEnum.MALAYALAM,V2ChannelCategoryEnum.FAVOURITES),
+		ASIANET_NEWS("ASIANET NEWS",635,V2ChannelCategoryEnum.MALAYALAM),
+		MANORAMA_NEWS("MANORAMA NEWS",637,V2ChannelCategoryEnum.MALAYALAM),
+		MATHRUBHUMI("Mathrubhumi",639,V2ChannelCategoryEnum.MALAYALAM),
+		INDIAVISION_NEWS("IndiaVision news",641,V2ChannelCategoryEnum.MALAYALAM),
+		REPORTER_TV("Reporter TV",643,V2ChannelCategoryEnum.MALAYALAM),
+		KOCHU_TV("Kochu TV",645,V2ChannelCategoryEnum.MALAYALAM),
+		SHALOM_TV("Shalom tv",647,V2ChannelCategoryEnum.MALAYALAM),
+		DD_MALAYALAM("DD Malayalam",649,V2ChannelCategoryEnum.MALAYALAM);
+
+		
+		
+		private String  channelDisplayName;
+		private int channelNum;
+		private V2ChannelCategoryEnum categories[];
+		
+		ChannelDetailEnum(String name,int num,V2ChannelCategoryEnum... categories){
+			this.channelDisplayName = name;
+			this.channelNum = num;
+			if(categories != null)
+				this.categories = categories;
+		}
+		
+		String displayName(){
+			return channelDisplayName;
+		}
+		
+		int channelNumber(){
+			return channelNum;
+		}
+		
+		V2ChannelCategoryEnum[] channelCategories(){
+				return categories;
+		}
+		
+		
+		public ChannelDetailEnum getAllChannelDetailEnumsForChannelCategory(V2ChannelCategoryEnum v2ChannelCategory){
+			
+			
+			return null;
+		}
+		
+		
+	}
+
+	
+}

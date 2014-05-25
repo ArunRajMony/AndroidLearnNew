@@ -1,0 +1,81 @@
+/**
+ * 
+ */
+package com.siprum.smart.tv.mobile.v2videoconapp;
+
+import java.util.Locale;
+
+/**
+ * @author arajmony
+ *
+ */
+
+
+public enum V2ChannelCategory {
+    
+	
+	FAVOURITES(0, V2Constants.ChannelCategory_Favourites),
+	TAMIL(1,V2Constants.ChannelCategory_Tamil),
+	HD_CHANNELS(2,V2Constants.ChannelCategory_HD_channels),
+	NEWS(3,V2Constants.ChannelCategory_NEWS),
+	MOVIES_ENGLISH(4,V2Constants.ChannelCategory_English_Movies),
+	SPORTS(5,V2Constants.ChannelCategory_Sports),
+	MALAYALAM(6,V2Constants.ChannelCategory_Malayalam),
+	CHILDRENS(7,V2Constants.ChannelCategory_Childrens);
+	
+	int position;
+	String groupName;
+	
+	
+	V2ChannelCategory(int position, String groupName){
+		this.position = position;
+		this.groupName = groupName;
+	}
+
+	public int getPosition() {
+		return position;
+	}
+
+
+	public String getGroupName() {
+		return groupName;
+	}
+
+	/*
+	 * returns the "position" of the given group name, and returns a -1 if not present. 
+	 */
+	public int getPositionForGroup(String groupName){
+		int pos = -1;
+		
+		for(V2ChannelCategory chCat : V2ChannelCategory.values()){
+			if(chCat.groupName.equalsIgnoreCase(groupName)){
+				pos = chCat.position;
+				break;
+			}
+		}
+		return pos;
+	}
+
+	/*
+	 * returns the "ChannelCategoryEnum" of the given group name, and returns a null if not present. 
+	 */
+	public V2ChannelCategory getChannelCategoryEnumForGroup(String groupName){
+		V2ChannelCategory obj= null;
+		
+		for(V2ChannelCategory chCat : V2ChannelCategory.values()){
+			if(chCat.groupName.equalsIgnoreCase(groupName)){
+				obj = chCat;
+				break;
+			}
+		}
+		return obj;
+	}
+	
+	
+	public int getV2ChannelCategoryCount(){
+		return V2ChannelCategory.values().length;
+	}
+	
+	
+	
+}

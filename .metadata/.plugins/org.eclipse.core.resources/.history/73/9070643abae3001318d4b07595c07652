@@ -1,0 +1,133 @@
+package com.example.tabsone;
+
+import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.GridView;
+import android.widget.ImageView;
+
+public class ImageAdapter extends BaseAdapter {
+    private Context mContext;
+    
+  
+
+    public ImageAdapter(Context c) {
+        mContext = c;
+    }
+
+    public int getCount() {
+        return mThumbIds.length;
+    }
+
+    public Object getItem(int position) {
+        return null;
+    }
+
+    public long getItemId(int position) {
+        return 0;
+    }
+
+    // create a new ImageView for each item referenced by the Adapter
+    public View getView(int position, View convertView, ViewGroup parent) {
+        ImageView imageView;
+        if (convertView == null) {  // if it's not recycled, initialize some attributes
+            imageView = new ImageView(mContext);
+            imageView.setLayoutParams(new GridView.LayoutParams(190, 100));
+            //imageView.setAdjustViewBounds(true);
+            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP); 
+            imageView.setPadding(1, 1, 1, 1);
+            
+        } else {
+            imageView = (ImageView) convertView;
+        }
+
+        imageView.setImageResource(mThumbIds[position]);
+       
+      
+        
+        return imageView;
+    }
+
+    
+    // references to our images
+    private Integer[] mThumbIds = {
+    		R.drawable.a_179 ,
+    		R.drawable.a_180 ,
+    		R.drawable.a_242 ,
+    		R.drawable.a_248 ,
+    		R.drawable.a_256 ,
+    		R.drawable.a_351 ,
+    		R.drawable.a_353 ,
+    		R.drawable.a_355 ,
+    		R.drawable.a_357 ,
+    		R.drawable.a_359 ,
+    		R.drawable.a_361 ,
+    		R.drawable.a_363 ,
+    		R.drawable.a_381 ,
+    		R.drawable.a_382 ,
+    		R.drawable.a_402 ,
+    		R.drawable.a_404 ,
+    		R.drawable.a_412 ,
+    		R.drawable.a_424 ,
+    		R.drawable.a_442 ,
+    		R.drawable.a_443 ,
+    		R.drawable.a_444 ,
+    		R.drawable.a_446 ,
+    		R.drawable.a_476 ,
+    		R.drawable.a_526 ,
+    		R.drawable.a_550 ,
+    		R.drawable.a_551 ,
+    		R.drawable.a_552 ,
+    		R.drawable.a_553 ,
+    		R.drawable.a_555 ,
+    		R.drawable.a_557 ,
+    		R.drawable.a_559 ,
+    		R.drawable.a_561 ,
+    		R.drawable.a_565 ,
+    		R.drawable.a_566 ,
+    		R.drawable.a_567 ,
+    		R.drawable.a_569 ,
+    		R.drawable.a_570 ,
+    		R.drawable.a_572 ,
+    		R.drawable.a_573 ,
+    		R.drawable.a_574 ,
+    		R.drawable.a_575 ,
+    		R.drawable.a_577 ,
+    		R.drawable.a_579 ,
+    		R.drawable.a_581 ,
+    		R.drawable.a_582 ,
+    		R.drawable.a_583 ,
+    		R.drawable.a_585 ,
+    		R.drawable.a_586 ,
+    		R.drawable.a_587 ,
+    		R.drawable.a_589 ,
+    		R.drawable.a_591 ,
+    		R.drawable.a_592 ,
+    		R.drawable.a_593 ,
+    		R.drawable.a_595 ,
+    		R.drawable.a_596 ,
+    		R.drawable.a_597 ,
+    		R.drawable.a_598 ,
+    		R.drawable.a_599 ,
+    		R.drawable.a_601 ,
+    		R.drawable.a_603 ,
+    		R.drawable.a_605 ,
+    		R.drawable.a_607 ,
+    		R.drawable.a_609 ,
+    		R.drawable.a_611 ,
+    		R.drawable.a_613 ,
+    		R.drawable.a_615 ,
+    		R.drawable.a_621 ,
+    		R.drawable.a_627 ,
+    		R.drawable.a_629 ,
+    		R.drawable.a_635 ,
+    		R.drawable.a_637 ,
+    		R.drawable.a_639 ,
+    		R.drawable.a_641 ,
+    		R.drawable.a_643 ,
+    		R.drawable.a_645 ,
+    		R.drawable.a_647 ,
+    		R.drawable.a_649 ,
+    };
+}

@@ -1,0 +1,36 @@
+/**
+ * 
+ */
+package com.siprum.smart.tv.mobile.v2videoconapp;
+
+/**
+ * @author arajmony
+ *
+ */
+
+ 
+public enum V2ChannelCategory {
+    
+
+	
+	FAVOURITES(0, "Favourites"),
+	TAMIL(1,"Tamil"),
+	HD_CHANNELS(2,"HD channels"),
+	NEWS(3,"NEWS"),
+	MOVIES_ENGLISH(4,"English Movies"),
+	SPORTS(5,"Sports"),
+	MALAYALAM(6,"Malayalam"),
+	CHILDRENS(7,"OTHERS");
+	
+	int position;
+	String groupName;
+	
+	V2ChannelCategory(int position, String groupName){
+		this.position = position;
+		this.groupName = groupName;
+	}
+	
+	
+	
+	
+}

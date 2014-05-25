@@ -1,0 +1,5 @@
+package com.siprum.smart.tv.mobile.v2videoconapp;
+
+public interface V2Constants {
+
+}

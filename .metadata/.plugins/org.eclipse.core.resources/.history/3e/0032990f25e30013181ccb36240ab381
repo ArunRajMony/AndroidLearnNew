@@ -1,0 +1,108 @@
+/**
+ * 
+ */
+package com.sirpum.audme.android;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * @author arajmony
+ * 
+ */
+public class ChannelUtility {
+	
+
+	
+	public  enum channelNamenum{
+		
+		Star_MOVIES_HD("Star Movies HD",242,ChannelCategory.FAVOURITES,ChannelCategory.MOVIES_ENGLISH),
+		Zee_studio_HD("Zee Studio HD",248,ChannelCategory.FAVOURITES,ChannelCategory.MOVIES_ENGLISH);
+		
+		
+		private String  channelDisplayName;
+		private int channelNum;
+		private ChannelCategory categories[];
+		
+		channelNamenum(String name,int num,ChannelCategory... categories){
+			this.channelDisplayName = name;
+			this.channelNum = num;
+			if(categories != null)
+				this.categories = categories;
+		}
+		
+		String displayName(){
+			return channelDisplayName;
+		}
+		
+		int channelNumber(){
+			return channelNum;
+		}
+		
+		ChannelCategory[] channelCategories(){
+				return categories;
+		}
+		
+	}
+
+	public static final int[] chNumImgIndexList = { 242, 248, 256, 351, 353,
+			355, 357, 359, 361,363, 381, 382, 402, 404, 412, 424, 526, 
+			442, 443,444, 446, 476,
+			
+			179, 180,
+			
+			574, 582, 596, 550, 551, 552, 573, 575,
+			581, 586,
+			
+			592, 591, 595, 577, 553, 587, 557, 559,
+			
+			815, 816, 817,
+			818, 819, 820, 821, 822, 823, 824, 825, 826, 827, 828, 829, 830,
+			
+			851, 852, 853, 854, 855, 856, 857, 858, 859, 860, 861, 862, 863,
+			864, 865, 866, 868, 869, 870 };
+
+	public static final String[] chNameImgIndexList = { "Star Movies HD ",
+			"Zee StudioHD ", "Movies Now HD ", "NDTV 24 X 7 ", "TIMES NOW ",
+			"CNN IBN ", "HEADLINES TODAY ", "CNN ", "BBC World ","Russia Today",
+			"CNBC TV 18 ", "cnbc prime hd ", "Star Sports HD 2 ",
+			"Star Sports HD 1 ", "ten HD ", "SONY SIX hd ", "M TUNES hd ",
+			"discovery HD ", "history tv ", "History HD (Tamil feed) ","ngc HD ", "Travel XP HD ", 
+			
+			"Star World ", "Star World HD ",
+			
+			"KTV HD ", "Sun Music HD ", "Sun Life ", "Tamil Home", "Sun Tv ",
+			"Sun TV HD ", "Ktv ", "Adithya ", "Sun Music ", "Sun News ",
+			
+			"KALAIGNAR SETHIGAL ", "jaya plus ", "Chutti Tv ", "J Movies ",
+			"star vijay ", "mega tv ", "jaya tv ", "zee tamil ",
+			"Kalaignar tv ", "Thanthi TV ", "Isai Aruvi ", "Makkal TV ",
+			"Siripoli ", "Vasanth TV ", "polimer ", "DD Podhigai ",
+			"captain TV ", "PUTHIYA THALAMURAI ", "RAJ TV ", "Murasu ",
+			"jaya max ", "Raj Digital Plus ", "angel tv ", "Discovery Tamil ",
+			
+			"Surya Tv ", "MAZHAVIL MANORAMA ", "Kiran Tv ", "Kappa ",
+			"ASIANET ", "ASIANET PLUS ", "Kairali tv ", "Amrita Tv ",
+			"DD Malayalam ", "Asianet Movies ", "Surya Music ", "Mathrubhumi ",
+			"ASIANET NEWS", "MANORAMA NEWS", "IndiaVision news ",
+			"Kairali we ", "Reporter TV ", "Shalom tv ", "Kochu TV " };
+	
+	public static Map<Integer, List<ChannelCategory>>  chCategoryMap = new HashMap<>();
+	
+	static{
+		//TODO populate this for all Channels. 
+		
+		chCategoryMap.put(Integer.valueOf(242), Arrays.asList(ChannelCategory.MOVIES_ENGLISH,ChannelCategory.FAVOURITES));
+		chCategoryMap.put(Integer.valueOf(798), Arrays.asList(ChannelCategory.TAMIL,ChannelCategory.FAVOURITES));
+		chCategoryMap.put(Integer.valueOf(801), Arrays.asList(ChannelCategory.TAMIL));
+		
+	}
+	
+	public ChannelUtility(){
+		
+		
+	}
+	
+}
